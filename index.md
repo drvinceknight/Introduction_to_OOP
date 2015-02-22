@@ -3,8 +3,6 @@ layout : default
 title  : Introduction to Object Oriented Programming
 ---
 
-## Python Resources
+## [Python Resources](./OverviewOfPython)
 
-## Past challenges
-
-## Challenge
+## [Challenges](./Challenges)
