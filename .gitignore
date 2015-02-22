@@ -1,0 +1,11 @@
+*snm
+*nav
+*aux
+*log
+*DS_Store
+*pyc
+*fls
+*out
+*toc
+_site
+*.fdb_latexmk

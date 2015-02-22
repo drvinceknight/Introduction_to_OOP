@@ -1,0 +1,15 @@
+# Site settings
+title            : Vincent Knight
+email            : vincent.knight@gmail.com
+description      : "Class site for a two day hackathon aiming to teach student object oriented programming"
+baseurl          : "/Introduction_to_OOP"
+url              : "http://drvinceknight.github.io"
+github_username  : "drvinceknight"
+twitter_username : "@drvinceknight"
+plus_username    : "+VincentKnight"
+blogurl          : "http://drvinceknight.github.io/unpeudemath/"
+
+# Build settings
+markdown    : kramdown
+permalink   : pretty
+highlighter : pygments
