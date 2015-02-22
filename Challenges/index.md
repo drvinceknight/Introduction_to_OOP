@@ -5,4 +5,4 @@ title  : Challenges
 
 Past challenge:
 
-- [Supermarket Challenge](./SupermarketChallenge): [Solutions](./SupermarketChallenge/solution.py)
+- [Supermarket Challenge](./SupermarketChallenge): [Solution](./SupermarketChallenge/solution.py)
