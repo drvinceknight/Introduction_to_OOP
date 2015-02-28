@@ -7,7 +7,7 @@ comments   : true
 
 Python is a very popular language with simple object oriented syntax.
 
-Here are a variety of resources that give a good grounding in Python:
+Here are a variety of resources that give a good grounding in Python and or might be helpful:
 
 - [Intro slides](./Slides/)
 - [My first year course site](http://vincent-knight.com/Computing_for_mathematics/)
@@ -15,6 +15,7 @@ Here are a variety of resources that give a good grounding in Python:
 - [A youtube playlist](http://www.youtube.com/playlist?list=PLnC5h3PY-znxd4czt1UGpZcDEXJDdvmQN)
 - [An OOP tutorial with role playing games](http://inventwithpython.com/blog/2014/12/02/why-is-object-oriented-programming-useful-with-an-role-playing-game-example/)
 - [The software carpentry site for Python](http://software-carpentry.org/v4/python/)
+- [A video on how to simulate a queue in Python](https://www.youtube.com/watch?v=WEA8m3j-Jqk)
 
 **If you find any more please do add them in the comments section below.**
 
