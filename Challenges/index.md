@@ -1,7 +1,8 @@
 ---
-layout   : page
-title    : Challenges
-comments : true
+layout     : post
+title      : Challenges
+categories : challenges
+comments   : true
 ---
 
 Past challenge:
