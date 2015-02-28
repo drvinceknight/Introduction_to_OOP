@@ -16,6 +16,9 @@ Here are a variety of resources that give a good grounding in Python and or migh
 - [An OOP tutorial with role playing games](http://inventwithpython.com/blog/2014/12/02/why-is-object-oriented-programming-useful-with-an-role-playing-game-example/)
 - [The software carpentry site for Python](http://software-carpentry.org/v4/python/)
 - [A video on how to simulate a queue in Python](https://www.youtube.com/watch?v=WEA8m3j-Jqk)
+- [Monte Carlo Simulation in Python](https://www.youtube.com/watch?v=VJTFfIqO4TU)
+- [Agent based modelling in Python](https://www.youtube.com/watch?v=Tz-lZy0AKRI)
+- [Handling csv files in Python](https://www.youtube.com/watch?v=jQ9aDyBWCXI)
 
 **If you find any more please do add them in the comments section below.**
 
