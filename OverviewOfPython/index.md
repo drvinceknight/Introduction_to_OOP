@@ -10,9 +10,9 @@ Python is a very popular language with simple object oriented syntax.
 Here are a variety of resources that give a good grounding in Python and or might be helpful:
 
 - [Intro slides](./Slides/)
+- [A youtube playlist of videos corresponding to slides](http://www.youtube.com/playlist?list=PLnC5h3PY-znxd4czt1UGpZcDEXJDdvmQN)
 - [My first year course site](http://vincent-knight.com/Computing_for_mathematics/)
 - [Reading list and collection of alternative resources from my first year course](http://vincent-knight.com/Computing_for_mathematics/Other/AlternativeResources/)
-- [A youtube playlist](http://www.youtube.com/playlist?list=PLnC5h3PY-znxd4czt1UGpZcDEXJDdvmQN)
 - [An OOP tutorial with role playing games](http://inventwithpython.com/blog/2014/12/02/why-is-object-oriented-programming-useful-with-an-role-playing-game-example/)
 - [The software carpentry site for Python](http://software-carpentry.org/v4/python/)
 - [A video on how to simulate a queue in Python](https://www.youtube.com/watch?v=WEA8m3j-Jqk)
