@@ -1,7 +1,8 @@
 ---
-layout   : page
-title    : Supermarket challenge
-comments : true
+layout     : post
+title      : Supermarket challenge
+categories : challenge
+comments   : true
 ---
 
 ##Company:

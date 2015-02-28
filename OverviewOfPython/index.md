@@ -1,6 +1,7 @@
 ---
-layout     : page
+layout     : post
 title      : Overview of Python
+categories : overview
 comments   : true
 ---
 
