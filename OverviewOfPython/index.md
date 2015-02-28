@@ -1,8 +1,7 @@
 ---
-layout     : post
+layout     : page
 title      : Overview of Python
-categories : resources
-comments   : false
+comments   : true
 ---
 
 Python is a very popular language with simple object oriented syntax.

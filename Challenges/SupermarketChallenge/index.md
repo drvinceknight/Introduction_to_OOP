@@ -1,7 +1,7 @@
 ---
 layout   : page
 title    : Supermarket challenge
-comments : false
+comments : true
 ---
 
 ##Company:
