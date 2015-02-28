@@ -1,6 +1,8 @@
 ---
-layout : default
+layout : post
 title  : Challenges
+categories: challenges
+comments : false
 ---
 
 Past challenge:

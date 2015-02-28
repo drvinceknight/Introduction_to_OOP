@@ -1,6 +1,8 @@
 ---
-layout : default
-title  : Overview of Python
+layout     : post
+title      : Overview of Python
+categories : resources
+comments   : false
 ---
 
 Python is a very popular language with simple object oriented syntax.
@@ -13,6 +15,8 @@ Here are a variety of resources that give a good grounding in Python:
 - [A youtube playlist](http://www.youtube.com/playlist?list=PLnC5h3PY-znxd4czt1UGpZcDEXJDdvmQN)
 - [An OOP tutorial with role playing games](http://inventwithpython.com/blog/2014/12/02/why-is-object-oriented-programming-useful-with-an-role-playing-game-example/)
 - [The software carpentry site for Python](http://software-carpentry.org/v4/python/)
+
+**If you find any more please do add them in the comments section below.**
 
 You might want to use a more advanced editor than the IDLE interface used during the workshop: [atom](https://atom.io/) is a very nice and powerful tool.
 
