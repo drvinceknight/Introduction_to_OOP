@@ -7,4 +7,4 @@ comments   : true
 
 Past challenge:
 
-- [Supermarket Challenge](./SupermarketChallenge): [Solution](./SupermarketChallenge/Solution.py)
+- [Supermarket Challenge](./SupermarketChallenge): [Solution.py](./SupermarketChallenge/Solution.py)
