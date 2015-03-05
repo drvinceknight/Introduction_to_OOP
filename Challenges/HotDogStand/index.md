@@ -54,7 +54,7 @@ As well as building a model of the system (consider that to be step one), if you
 - Wholesale price: 3.
 - Retail price: 4.
 
-**Scenario 3**
+**Scenario 4**
 
 - Arrival rate: 1 per time unit.
 - Service rate: .9 per time unit.
