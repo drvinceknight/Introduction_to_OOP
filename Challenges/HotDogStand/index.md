@@ -29,6 +29,7 @@ There are 2 decision parameters:
 ##Particularities that need to be taken in to account:
 
 - Customers will be lost if they arrive at the queue and there are not sufficient hotdogs to feed them.
+    **Note that they do not join the queue if there is not sufficient stock at the time of their arrival.**
 
 As well as building a model of the system (consider that to be step one), if you can, obtain the best possible replenishment period and quantity for the following input parameters:
 
