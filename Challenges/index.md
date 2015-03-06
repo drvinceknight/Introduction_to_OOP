@@ -11,4 +11,4 @@ Past challenge:
 
 Current challenge:
 
-- [Hot Dog Stand](./HotDogStand)
+- [Hot Dog Stand](./HotDogStand): [Solution/py](./HotDogStand/Solution.py) ([Very short but still readable solution](./HotDogStand/ShortSolution/solution.py))
