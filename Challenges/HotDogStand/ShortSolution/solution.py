@@ -6,5 +6,4 @@ def main(arrival_date=0, delivery_date=0, customers=0, delivery_period=10, deliv
         else: delivery_date, hot_dogs = delivery_date + delivery_period, hot_dogs + delivery_quantity
     return customers * retail_price - int((arrival_date - warmup) / delivery_period) * delivery_quantity * wholesale_price
 min_period, max_period, min_quantity, max_quantity, trials = 1, 20, 1, 20, 20
-seed(1)
 print max([(period, quantity, sum([main(delivery_period=period, delivery_quantity=quantity) for k in range(trials)])) for period in range(min_period, max_period + 1) for quantity in range(min_quantity, max_quantity + 1)], key=lambda x: x[2])
