@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="947.81451"
+   height="750.97144"
+   id="svg2">
+  <defs
+     id="defs4">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4460" />
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         id="path3795"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt" />
+    </marker>
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow1Lstart"
+       style="overflow:visible">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         id="path3792"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt" />
+    </marker>
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3018" />
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(992.32571,-89.053594)"
+     id="layer1">
+    <text
+       x="-964.1568"
+       y="133.79074"
+       id="text2988"
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:AppleGothic;-inkscape-font-specification:AppleGothic"><tspan
+         x="-964.1568"
+         y="133.79074"
+         id="tspan2990">Always Rock</tspan></text>
+    <text
+       x="-323.74359"
+       y="130.93359"
+       id="text3004"
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:AppleGothic;-inkscape-font-specification:AppleGothic"><tspan
+         x="-323.74359"
+         y="130.93359"
+         id="tspan3006">Alternate RPS</tspan></text>
+    <text
+       x="-982.28571"
+       y="225.21933"
+       id="text3008"
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:AppleGothic;-inkscape-font-specification:AppleGothic"><tspan
+         x="-982.28571"
+         y="225.21933"
+         id="tspan3010">R, R, R, R, R, ...</tspan></text>
+    <text
+       x="-333.71429"
+       y="225.21933"
+       id="text3012"
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:AppleGothic;-inkscape-font-specification:AppleGothic"><tspan
+         x="-333.71429"
+         y="225.21933"
+         id="tspan3014">R, P, S, R, P, ...</tspan></text>
+    <path
+       d="m -660,149.50504 277.14286,0"
+       id="path3016"
+       style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Lstart);marker-end:url(#Arrow1Lend)" />
+    <text
+       x="-857.87103"
+       y="581.505"
+       id="text4426"
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:AppleGothic;-inkscape-font-specification:AppleGothic"><tspan
+         x="-857.87103"
+         y="581.505"
+         id="tspan4430">Always Paper</tspan><tspan
+         x="-857.87103"
+         y="631.505"
+         id="tspan4434">Always Scissors</tspan><tspan
+         x="-857.87103"
+         y="681.505"
+         id="tspan4436">Always Paper</tspan><tspan
+         x="-857.87103"
+         y="731.505"
+         id="tspan4438">Alternate RPS</tspan><tspan
+         x="-857.87103"
+         y="781.505"
+         id="tspan4440">Alternate RSP</tspan><tspan
+         x="-857.87103"
+         y="831.505"
+         id="tspan4442">Random</tspan></text>
+    <text
+       x="281.21683"
+       y="298.23801"
+       transform="matrix(0,1,-1,0,0,0)"
+       id="text4444"
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:AppleGothic;-inkscape-font-specification:AppleGothic"><tspan
+         x="281.21683"
+         y="298.23801"
+         id="tspan4446">Always Paper</tspan><tspan
+         x="281.21683"
+         y="348.23801"
+         id="tspan4448">Always Scissors</tspan><tspan
+         x="281.21683"
+         y="398.23801"
+         id="tspan4450">Always Paper</tspan><tspan
+         x="281.21683"
+         y="448.23801"
+         id="tspan4452">Alternate RPS</tspan><tspan
+         x="281.21683"
+         y="498.23801"
+         id="tspan4454">Alternate RSP</tspan><tspan
+         x="281.21683"
+         y="548.23804"
+         id="tspan4456">Random</tspan></text>
+    <path
+       d="m -428.57143,563.79075 0,157.14286 -148.57143,0"
+       id="path4458"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <text
+       x="-397.14285"
+       y="766.64789"
+       id="text4462"
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:AppleGothic;-inkscape-font-specification:AppleGothic"><tspan
+         x="-397.14285"
+         y="766.64789"
+         id="tspan4464">...</tspan><tspan
+         x="-397.14285"
+         y="816.64789"
+         id="tspan4466" /></text>
+  </g>
+</svg>
