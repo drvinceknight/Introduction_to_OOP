@@ -170,3 +170,37 @@ class TestMatch(unittest.TestCase):
             for s in p.history:
                 self.assertIn(s, solution.rps)
 
+
+class TestTournament(unittest.TestCase):
+    """Test the tournament"""
+    @given(strategies=lists(sampled_from(strategies), min_size=2,
+                            max_size=len(strategies), unique=True),
+           rm=random_module(), rounds=integers(min_value=1),
+           repetitions=integers(min_value=1))
+    @example(strategies=strategies,
+             rm=random.seed(0), rounds=21, repetitions=5)
+    def test_init(self, strategies, rounds, repetitions, rm):
+        """Test init"""
+        names = [str(s) for s in xrange(len(strategies))]
+        players = [s(n) for s, n in zip(strategies, names)]
+        tournament = solution.Tournament(players, rounds, repetitions)
+
+        self.assertEqual(tournament.players, players)
+        self.assertEqual(tournament.rounds, rounds)
+        self.assertEqual(tournament.repetitions, repetitions)
+
+        # Checking all players in matches are players in tournaments
+        players_in_matches = []
+        for m in tournament.matches:
+            for p in m.players:
+                self.assertIn(p, tournament.players)
+                if p not in players_in_matches:
+                    players_in_matches.append(p)
+
+        # Checking all players in tournament are players in matches
+        for p in tournament.players:
+                self.assertIn(p, players_in_matches)
+
+        # Checking size of tournaments
+        self.assertEqual(len(tournament.matches),
+                         len(players) * (len(players) - 1) / 2)

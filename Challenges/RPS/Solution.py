@@ -98,7 +98,9 @@ class Tournament():
     """
     A class for the tournament
     """
-    def __init__(self, strategies, rounds, repetitions):
-        self.strategies = strategies
+    def __init__(self, players, rounds, repetitions):
+        self.players = players
         self.rounds = rounds
         self.repetitions = repetitions
+        self.matches = [Match(p1, p2) for p1, p2 in
+                        itertools.combinations(players, 2)]
