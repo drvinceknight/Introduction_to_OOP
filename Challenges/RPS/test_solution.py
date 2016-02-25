@@ -204,3 +204,19 @@ class TestTournament(unittest.TestCase):
         # Checking size of tournaments
         self.assertEqual(len(tournament.matches),
                          len(players) * (len(players) - 1) / 2)
+
+
+    @given(strategies=lists(sampled_from(strategies), min_size=2,
+                            max_size=len(strategies), unique=True),
+           rm=random_module(), rounds=integers(min_value=1),
+           repetitions=integers(min_value=1))
+    @example(strategies=strategies,
+             rm=random.seed(0), rounds=21, repetitions=5)
+    def test_play(self, strategies, rounds, repetitions, rm):
+        """Test init"""
+        names = [str(s) for s in xrange(len(strategies))]
+        players = [s(n) for s, n in zip(strategies, names)]
+        tournament = solution.Tournament(players, rounds, repetitions)
+        tournament.play()
+        for m in tournament.matches:
+            self.assertEqual(len(m.results), tournament.rounds)
