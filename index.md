@@ -5,9 +5,10 @@ title  : Introduction to Object Oriented Programming
 
 This is the class site for the hackathon aimed at describing the basics of Object Oriented Programming through a challenge based approach:
 
-- On Monday you will have a two hour workshop taking you through the basics of Python and Object Oriented Programming
+- Today: workshop on Python.
 - On Thursday you will be given a challenge that you (as a group) then have two days to solve.
-    - You will get some feedback at the end of Thursday
+    - You will get some feedback at the end of Thursday (possibly late into the
+      evening)
     - Your final submission will be assessed at the end of Friday
 
 ## [Python Resources](./OverviewOfPython)
