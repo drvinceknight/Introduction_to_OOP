@@ -1,6 +1,6 @@
 ---
 layout     : post
-title      : Supermarket challenge
+title      : Rock Paper Scissors
 categories : challenge
 comments   : false
 ---
@@ -14,8 +14,9 @@ University
 Program to help understand the best strategy to play [Rock Paper
 Scissors](https://en.wikipedia.org/wiki/Rock-paper-scissors).  You need to build
 a tournament that creates a [round
-robin](https://en.wikipedia.org/wiki/Round-robin_tournament) of multiple
-strategies of players playing Rock Paper Scissors. Each match between 2 players
+robin](https://en.wikipedia.org/wiki/Round-robin_tournament) of players using
+different strategies playing
+Rock Paper Scissors. Each match between 2 players
 will be 21 rounds of Rock Paper Scissors.
 
 After creating this tournament, create a new strategy that wins the overall
@@ -31,7 +32,6 @@ There will be 6 original strategies/players:
 - Alternate: Rock then Paper then Scissors;
 - Alternate: Rock then Scissors then Paper;
 - Play randomly
-
 
 ##Particularities that need to be taken in to account:
 
