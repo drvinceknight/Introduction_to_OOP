@@ -170,53 +170,66 @@ class TestMatch(unittest.TestCase):
             for s in p.history:
                 self.assertIn(s, solution.rps)
 
-
-class TestTournament(unittest.TestCase):
-    """Test the tournament"""
-    @given(strategies=lists(sampled_from(strategies), min_size=2,
-                            max_size=len(strategies), unique=True),
-           rm=random_module(), rounds=integers(min_value=1),
-           repetitions=integers(min_value=1))
-    @example(strategies=strategies,
-             rm=random.seed(0), rounds=21, repetitions=5)
-    def test_init(self, strategies, rounds, repetitions, rm):
-        """Test init"""
-        names = [str(s) for s in xrange(len(strategies))]
-        players = [s(n) for s, n in zip(strategies, names)]
-        tournament = solution.Tournament(players, rounds, repetitions)
-
-        self.assertEqual(tournament.players, players)
-        self.assertEqual(tournament.rounds, rounds)
-        self.assertEqual(tournament.repetitions, repetitions)
-
-        # Checking all players in matches are players in tournaments
-        players_in_matches = []
-        for m in tournament.matches:
-            for p in m.players:
-                self.assertIn(p, tournament.players)
-                if p not in players_in_matches:
-                    players_in_matches.append(p)
-
-        # Checking all players in tournament are players in matches
-        for p in tournament.players:
-                self.assertIn(p, players_in_matches)
-
-        # Checking size of tournaments
-        self.assertEqual(len(tournament.matches),
-                         len(players) * (len(players) - 1) / 2)
+    @given(name1=text(), name2=text(),
+           strategies=lists(sampled_from(strategies), min_size=2, max_size=2),
+           rm=random_module(), rounds=integers(min_value=1, max_value=50))
+    @example(name1="Vince", name2="Zoe", strategies=strategies[:2],
+             rm=random.seed(0), rounds=21)
+    def test_results(self, name1, name2, strategies, rm, rounds):
+        p1 = strategies[0](name1)
+        p2 = strategies[1](name2)
+        match = solution.Match(p1, p2)
+        match.play(rounds=rounds)
+        for r in match.results:
+            self.assertIn(r, [(1, -1), (-1, 1), (0, 0)])
 
 
-    @given(strategies=lists(sampled_from(strategies), min_size=2,
-                            max_size=len(strategies), unique=True),
-           rm=random_module(), rounds=integers(min_value=1),
-           repetitions=integers(min_value=1))
-    @example(strategies=strategies,
-             rm=random.seed(0), rounds=21, repetitions=5)
-    def test_play(self, strategies, rounds, repetitions, rm):
-        """Test init"""
-        names = [str(s) for s in xrange(len(strategies))]
-        players = [s(n) for s, n in zip(strategies, names)]
-        tournament = solution.Tournament(players, rounds, repetitions)
-        tournament.play()
-        for m in tournament.matches:
-            self.assertEqual(len(m.results), tournament.rounds)
+#class TestTournament(unittest.TestCase):
+    #"""Test the tournament"""
+    #@given(strategies=lists(sampled_from(strategies), min_size=2,
+                            #max_size=len(strategies), unique=True),
+           #rm=random_module(), rounds=integers(min_value=1, max_value=50),
+           #repetitions=integers(min_value=1))
+    #@example(strategies=strategies,
+             #rm=random.seed(0), rounds=21, repetitions=5)
+    #def test_init(self, strategies, rounds, repetitions, rm):
+        #"""Test init"""
+        #names = [str(s) for s in xrange(len(strategies))]
+        #players = [s(n) for s, n in zip(strategies, names)]
+        #tournament = solution.Tournament(players, rounds, repetitions)
+
+        #self.assertEqual(tournament.players, players)
+        #self.assertEqual(tournament.rounds, rounds)
+        #self.assertEqual(tournament.repetitions, repetitions)
+
+        ## Checking all players in matches are players in tournaments
+        #players_in_matches = []
+        #for m in tournament.matches:
+            #for p in m.players:
+                #self.assertIn(p, tournament.players)
+                #if p not in players_in_matches:
+                    #players_in_matches.append(p)
+
+        ## Checking all players in tournament are players in matches
+        #for p in tournament.players:
+                #self.assertIn(p, players_in_matches)
+
+        ## Checking size of tournaments
+        #self.assertEqual(len(tournament.matches),
+                         #len(players) * (len(players) - 1) / 2)
+
+
+    #@given(strategies=lists(sampled_from(strategies), min_size=2,
+                            #max_size=len(strategies), unique=True),
+           #rm=random_module(), rounds=integers(min_value=1),
+           #repetitions=integers(min_value=1))
+    #@example(strategies=strategies,
+             #rm=random.seed(0), rounds=21, repetitions=5)
+    #def test_play(self, strategies, rounds, repetitions, rm):
+        #"""Test init"""
+        #names = [str(s) for s in xrange(len(strategies))]
+        #players = [s(n) for s, n in zip(strategies, names)]
+        #tournament = solution.Tournament(players, rounds, repetitions)
+        #tournament.play()
+        #for m in tournament.matches:
+            #self.assertEqual(len(m.results), tournament.rounds)
