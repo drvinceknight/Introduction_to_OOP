@@ -105,7 +105,13 @@ class Match():
         p1, p2 = self.players
 
         self.results = [self.rules[rnd] for rnd in zip(p1.history, p2.history)]
-
+        self.scores = [sum(v) for v in zip(*self.results)]
+        if self.scores[0] == self.scores[1]:
+            self.winner = False
+        elif self.scores[0] > self.scores[1]:
+            self.winner = self.players[0]
+        else:
+            self.winner = self.players[1]
 
 
 
