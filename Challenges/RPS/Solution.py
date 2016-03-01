@@ -85,8 +85,9 @@ class Match():
         p2.reset()
 
         for round in xrange(rounds):
-            p1.history.append(p2.strategy(p1))
-            p2.history.append(p1.strategy(p2))
+            p1_dec, p2_dec = p1.strategy(p2), p2.strategy(p1)
+            p1.history.append(p1_dec)
+            p2.history.append(p2_dec)
 
 
 #############################
