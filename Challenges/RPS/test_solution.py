@@ -156,7 +156,7 @@ class TestMatch(unittest.TestCase):
 
     @given(name1=text(), name2=text(),
            strategies=lists(sampled_from(strategies), min_size=2, max_size=2),
-           rm=random_module(), rounds=integers(min_value=1))
+           rm=random_module(), rounds=integers(min_value=1, max_value=20))
     @example(name1="Vince", name2="Zoe", strategies=strategies[:2],
              rm=random.seed(0), rounds=21)
     def test_play(self, name1, name2, strategies, rm, rounds):
