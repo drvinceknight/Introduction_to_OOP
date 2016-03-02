@@ -236,3 +236,48 @@ class TestTournament(unittest.TestCase):
         tournament.play()
         for m in tournament.matches:
             self.assertEqual(len(m.results), tournament.rounds)
+            self.assertGreaterEqual(min(m.scores), -1 * tournament.rounds)
+            self.assertLessEqual(max(m.scores), tournament.rounds)
+            self.assertIn(m.winner, list(m.players) + [False])
+            if m.winner:
+                self.assertEqual(max(m.scores),
+                                 m.scores[m.players.index(m.winner)])
+
+
+    @given(strategies=lists(sampled_from(strategies), min_size=2,
+                            max_size=len(strategies), unique=True),
+           rm=random_module(), rounds=integers(min_value=1, max_value=50),
+           repetitions=integers(min_value=1))
+    @example(strategies=strategies,
+             rm=random.seed(0), rounds=21, repetitions=5)
+    def test_summary(self, strategies, rounds, repetitions, rm):
+        names = [str(s) for s in xrange(len(strategies))]
+        players = [s(n) for s, n in zip(strategies, names)]
+        tournament = solution.Tournament(players, rounds, repetitions)
+        tournament.play()
+        tournament.summarise()
+        self.assertIsInstance(tournament.wins, list)
+        self.assertEqual(len(tournament.wins), len(strategies))
+        for record in tournament.wins:
+            self.assertEqual(len(record), 2)
+            self.assertIn(record[0], tournament.players)
+            self.assertTrue(record[1] <= len(tournament.players) - 1)
+
+
+    @given(strategies=lists(sampled_from(strategies), min_size=2,
+                            max_size=len(strategies), unique=True),
+           rm=random_module(), rounds=integers(min_value=1, max_value=50),
+           repetitions=integers(min_value=1, max_value=10))
+    @example(strategies=strategies,
+             rm=random.seed(0), rounds=21, repetitions=5)
+    def test_repeat_play(self, strategies, rounds, repetitions, rm):
+        names = [str(s) for s in xrange(len(strategies))]
+        players = [s(n) for s, n in zip(strategies, names)]
+        tournament = solution.Tournament(players, rounds, repetitions)
+        tournament.repeat_play()
+        self.assertEqual(len(tournament.data), len(tournament.players))
+        for record in tournament.data:
+            self.assertIn(record[0], tournament.players)
+            self.assertEqual(len(record[1]), tournament.repetitions)
+            self.assertLessEqual(max(record[1]), len(tournament.players) - 1)
+            self.assertGreaterEqual(min(record[1]), 0)

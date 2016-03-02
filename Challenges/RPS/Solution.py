@@ -135,3 +135,19 @@ class Tournament():
     def play(self):
         for m in self.matches:
             m.play(self.rounds)
+
+    def summarise(self):
+        self.wins = [[p, 0] for p in self.players]
+        for record in self.wins:
+            for m in self.matches:
+                if p in m.players and m.winner:
+                    if m.winner == p:
+                        record[1] += 1
+
+    def repeat_play(self):
+        self.data = [[p, []] for p in self.players]
+        for _ in range(self.repetitions):
+            self.play()
+            self.summarise()
+            for i, p in enumerate(self.players):
+                self.data[i][1].append(self.wins[i][1])
