@@ -5,6 +5,8 @@ categories : challenges
 comments   : true
 ---
 
+Challenge: [Rock Paper Scissors](./RPS)
+
 Past challenge:
 
 - [Supermarket Challenge](./SupermarketChallenge): [Solution.py](./SupermarketChallenge/Solution.py)

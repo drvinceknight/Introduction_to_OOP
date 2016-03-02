@@ -18,4 +18,4 @@ A list of further resources that you might want to look through in your own time
 ## [Challenges](./Challenges)
 
 You can find the past challenge [here](./Challenges).
-When available the current challenge will also be there.
+This year's challenge is also there.
