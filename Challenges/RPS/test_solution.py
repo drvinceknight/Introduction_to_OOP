@@ -180,11 +180,41 @@ class TestMatch(unittest.TestCase):
         p2 = strategies[1](name2)
         match = solution.Match(p1, p2)
         match.play(rounds=rounds)
+
+        self.assertEqual(len(match.results), rounds)
+
         for r in match.results:
             self.assertIn(r, [(1, -1), (-1, 1), (0, 0)])
 
         self.assertEqual(match.scores,  [sum(v) for v in zip(*match.results)])
         self.assertIn(match.winner, list(match.players) + [False])
+
+    def test_R_v_P(self):
+        rock = solution.AlwaysRock("Rock")
+        paper = solution.AlwaysPaper("Paper")
+        match = solution.Match(rock, paper)
+        match.play(rounds=21)
+        for r in match.results:
+            self.assertEqual(r, (-1, 1))
+        self.assertEqual(match.winner, paper)
+
+    def test_R_v_S(self):
+        rock = solution.AlwaysRock("Rock")
+        scissors = solution.AlwaysScissors("Scissors")
+        match = solution.Match(rock, scissors)
+        match.play(rounds=21)
+        for r in match.results:
+            self.assertEqual(r, (1, -1))
+        self.assertEqual(match.winner, rock)
+
+    def test_S_v_P(self):
+        paper = solution.AlwaysPaper("Paper")
+        scissors = solution.AlwaysScissors("Scissors")
+        match = solution.Match(paper, scissors)
+        match.play(rounds=21)
+        for r in match.results:
+            self.assertEqual(r, (-1, 1))
+        self.assertEqual(match.winner, scissors)
 
 
 class TestTournament(unittest.TestCase):
@@ -243,6 +273,19 @@ class TestTournament(unittest.TestCase):
                 self.assertEqual(max(m.scores),
                                  m.scores[m.players.index(m.winner)])
 
+    def test_play_RvP(self, strategies=strategies):
+        random.seed(0)
+
+        strategies = [solution.AlwaysRock, solution.AlwaysPaper]
+        rounds = 2
+        repetitions = 4
+
+        names = [str(s) for s in xrange(len(strategies))]
+        players = [s(n) for s, n in zip(strategies, names)]
+        tournament = solution.Tournament(players, rounds, repetitions)
+        tournament.play()
+        self.assertEqual(len(tournament.matches), 1)
+        self.assertEqual(tournament.matches[0].results, [(-1, 1)] * 2)
 
     @given(strategies=lists(sampled_from(strategies), min_size=2,
                             max_size=len(strategies), unique=True),
@@ -263,6 +306,36 @@ class TestTournament(unittest.TestCase):
             self.assertIn(record[0], tournament.players)
             self.assertTrue(record[1] <= len(tournament.players) - 1)
 
+    def test_summary_RvP(self, strategies=strategies):
+        strategies = [solution.AlwaysRock, solution.AlwaysPaper]
+        rounds = 2
+        repetitions = 4
+
+        names = [str(s) for s in xrange(len(strategies))]
+        players = [s(n) for s, n in zip(strategies, names)]
+        tournament = solution.Tournament(players, rounds, repetitions)
+        tournament.play()
+        tournament.summarise()
+
+        self.assertEqual(len(tournament.wins), 2)
+        self.assertEqual(tournament.wins[0], [players[0], 0])
+        self.assertEqual(tournament.wins[1], [players[1], 1])
+
+    def test_summary_RvS(self, strategies=strategies):
+        strategies = [solution.AlwaysRock, solution.AlwaysScissors]
+        rounds = 2
+        repetitions = 4
+
+        names = [str(s) for s in xrange(len(strategies))]
+        players = [s(n) for s, n in zip(strategies, names)]
+        tournament = solution.Tournament(players, rounds, repetitions)
+        tournament.play()
+        tournament.summarise()
+
+        self.assertEqual(len(tournament.wins), 2)
+        self.assertEqual(tournament.wins[0], [players[0], 1])
+        self.assertEqual(tournament.wins[1], [players[1], 0])
+
 
     @given(strategies=lists(sampled_from(strategies), min_size=2,
                             max_size=len(strategies), unique=True),
@@ -281,3 +354,50 @@ class TestTournament(unittest.TestCase):
             self.assertEqual(len(record[1]), tournament.repetitions)
             self.assertLessEqual(max(record[1]), len(tournament.players) - 1)
             self.assertGreaterEqual(min(record[1]), 0)
+
+    def test_repeat_play_RvP(self, strategies=strategies):
+        random.seed(0)
+
+        strategies = [solution.AlwaysRock, solution.AlwaysPaper]
+        rounds = 5
+        repetitions = 5
+
+        names = [str(s) for s in xrange(len(strategies))]
+        players = [s(n) for s, n in zip(strategies, names)]
+        tournament = solution.Tournament(players, rounds, repetitions)
+        tournament.repeat_play()
+        self.assertEqual(tournament.data, [[players[0], [0] * repetitions],
+                                           [players[1], [1] * repetitions]])
+
+    def test_repeat_play_RvS(self, strategies=strategies):
+        random.seed(0)
+
+        strategies = [solution.AlwaysRock, solution.AlwaysScissors]
+        rounds = 5
+        repetitions = 5
+
+        names = [str(s) for s in xrange(len(strategies))]
+        players = [s(n) for s, n in zip(strategies, names)]
+        tournament = solution.Tournament(players, rounds, repetitions)
+        tournament.repeat_play()
+        self.assertEqual(tournament.data, [[players[0], [1] * repetitions],
+                                           [players[1], [0] * repetitions]])
+
+    def test_repeat_play_all_strategies(self, strategies=strategies):
+        random.seed(0)
+
+        strategies = strategies
+        rounds = 5
+        repetitions = 5
+
+        names = [str(s) for s in xrange(len(strategies))]
+        players = [s(n) for s, n in zip(strategies, names)]
+        tournament = solution.Tournament(players, rounds, repetitions)
+        tournament.repeat_play()
+        expected_results = [[players[0], [2, 3, 1, 2, 2]],
+                            [players[1], [2, 2, 3, 1, 2]],
+                            [players[2], [2, 1, 1, 3, 3]],
+                            [players[3], [2, 2, 1, 4, 3]],
+                            [players[4], [4, 2, 2, 1, 2]],
+                            [players[5], [2, 4, 3, 2, 2]]]
+        self.assertEqual(tournament.data, expected_results)
