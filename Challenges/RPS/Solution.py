@@ -200,3 +200,43 @@ class Tournament():
             self.summarise()
             for i, p in enumerate(self.players):
                 self.data[i][1].append(self.wins[i][1])
+
+
+if __name__ == '__main__':
+
+    repetitions = 20
+    rounds = 21
+    strategies = [AlternateRPS, AlternateRSP,
+                  AlwaysPaper, AlwaysRock,
+                  AlwaysScissors, Random]
+    names = ["AlternateRPS", "AlternateRSP",
+             "AlwaysPaper", "AlwaysRock",
+             "AlwaysScissors", "Random"]
+    players = [s(n) for s, n in zip(strategies, names)]
+    tournament = Tournament(players, rounds, repetitions)
+    tournament.repeat_play()
+    tournament.data.sort(key=lambda x: sum(x[1]))
+    for row in tournament.data:
+        name = row[0].name
+        mean_wins = sum(row[1]) / float(repetitions)
+        print(name, mean_wins, row[1])
+
+
+    print("=" * 31)
+    # Creating a new strategy which aims to simply mirror the previous play
+    class Mirror(Strategy):
+        """Always plays Scissors"""
+        def strategy(self, opponent):
+            try:
+                return opponent.history[-1]
+            except IndexError:
+                return random.choice(rps)
+
+    players.append(Mirror("Mirror"))
+    tournament = Tournament(players, rounds, repetitions)
+    tournament.repeat_play()
+    tournament.data.sort(key=lambda x: sum(x[1]))
+    for row in tournament.data:
+        name = row[0].name
+        mean_wins = sum(row[1]) / float(repetitions)
+        print(name, mean_wins, row[1])
