@@ -24,7 +24,7 @@ tournament.
 
 ## Parameters:
 
-There will be 6 original strategies/players:
+There will be 7 original strategies/players:
 
 - Always play Rock;
 - Always play Paper;
@@ -32,6 +32,7 @@ There will be 6 original strategies/players:
 - Alternate: Rock then Paper then Scissors;
 - Alternate: Rock then Scissors then Paper;
 - Play randomly
+- Mirror: Repeats the 'previous move' made by the oppponent.
 
 ## Particularities that need to be taken in to account:
 
