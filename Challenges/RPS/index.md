@@ -5,11 +5,11 @@ categories : challenge
 comments   : false
 ---
 
-##Company:
+## Company:
 
 University
 
-##Required product:
+## Required product:
 
 Program to help understand the best strategy to play [Rock Paper
 Scissors](https://en.wikipedia.org/wiki/Rock-paper-scissors).  You need to build
@@ -22,7 +22,7 @@ will be 21 rounds of Rock Paper Scissors.
 After creating this tournament, create a new strategy that wins the overall
 tournament.
 
-##Parameters:
+## Parameters:
 
 There will be 6 original strategies/players:
 
@@ -33,19 +33,19 @@ There will be 6 original strategies/players:
 - Alternate: Rock then Scissors then Paper;
 - Play randomly
 
-##Particularities that need to be taken in to account:
+## Particularities that need to be taken in to account:
 
 Strategies are allowed to keep track of what has happened throughout their
 current duel but **do not know** what strategy/player they are playing (although
 they can try to figure it out).
 
-##Summary:
+## Summary:
 
 The following picture summarises your challenge:
 
 ![Simple summar](./rps_tournament.svg)
 
-##Evaluation:
+## Evaluation:
 
 
 Your code will be evaluated in terms of:
@@ -56,7 +56,7 @@ Your code will be evaluated in terms of:
 - Clarity (is it well written/documented/tested  - This is a subjective criteria)
 - How have you been working as a team (This is a subjective criteria)
 
-##Suggestion:
+## Suggestion:
 
 I suggest you proceed by clearly defining independent programming tasks and
 attempting to work independently whilst ensuring that each piece of code
