@@ -5,7 +5,8 @@ categories : challenges
 comments   : true
 ---
 
-Challenge: [Rock Paper Scissors](./RPS)
+Challenge: [Rock Paper Scissors](./RPS), [Solution.py](./RPS/Solution.py)
+([Tests](./RPS/test_solution.py): don't worry about this too much, only if you're interested)
 
 Past challenge:
 
