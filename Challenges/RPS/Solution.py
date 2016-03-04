@@ -181,10 +181,6 @@ class Tournament():
             if m.winner:
                 record = [r for r in self.wins if r[0] == m.winner][0]
                 record[1] += 1
-        #for record in self.wins:
-            #for m in self.matches:
-                #if p in m.players and m.winner == p:
-                    #record[1] += 1
 
     def repeat_play(self):
         """Plays the repeated version of the tournament. Puts outcomes (as
