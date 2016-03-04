@@ -24,7 +24,7 @@ tournament.
 
 ## Parameters:
 
-There will be 7 original strategies/players:
+There will be 6 original strategies/players:
 
 - Always play Rock;
 - Always play Paper;
@@ -47,7 +47,6 @@ The following picture summarises your challenge:
 ![Simple summar](./rps_tournament.svg)
 
 ## Evaluation:
-
 
 Your code will be evaluated in terms of:
 
