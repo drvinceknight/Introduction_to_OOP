@@ -5,6 +5,8 @@ categories : challenges
 comments   : true
 ---
 
+Challenge: [Configuring a queueing network](./QueuingNetwork).
+
 Past challenge:
 
 - [Rock Paper Scissors](./RPS) [Solution.py](./RPS/Solution.py)
