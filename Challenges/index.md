@@ -5,10 +5,12 @@ categories : challenges
 comments   : true
 ---
 
-Challenge: [Configuring a queueing network](./QueuingNetwork).
 
 Past challenge:
 
+- [Configuring a queueing network](./QueuingNetwork)
+  [Solution.py](./QueuingNetwork/main.py)
+  ([Tests](./QueuingNetwork/test_main.py): don't worry about this too much.)
 - [Rock Paper Scissors](./RPS) [Solution.py](./RPS/Solution.py)
   ([Tests](./RPS/test_solution.py): don't worry about this too much,
   only if you're interested)
